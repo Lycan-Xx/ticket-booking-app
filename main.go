@@ -6,6 +6,7 @@ func main() {
 	hotelName := "MSB hotels and resort"
 	const hotelTickets int = 50
 	var remainingTickets uint = 50
+	var bookings []string
 
 	fmt.Printf("Hello, welcome to %v booking app\n", hotelName)
 	fmt.Println("Get your hotel tickets here and enjoy your stay")
@@ -36,7 +37,14 @@ func main() {
 
 	remainingTickets = remainingTickets - userTickets
 
-	// End of ticket reduction logic
+	// Array logic
+
+	bookings = append(bookings, firstName+" "+lastName)
+
+	fmt.Printf("The whole slice: %v\n", bookings)
+	fmt.Printf("The first value: %v\n", bookings[0])
+	fmt.Printf("Slice type: %T\n", bookings)
+	fmt.Printf("Slice length: %v\n", len(bookings))
 
 	fmt.Printf("%v of %v Tickets left for %v.....!\n", remainingTickets, hotelTickets, hotelName)
 
