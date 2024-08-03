@@ -6,46 +6,48 @@ func main() {
 	hotelName := "MSB hotels and resort"
 	const hotelTickets int = 50
 	var remainingTickets uint = 50
-	var bookings []string
+	bookings := []string{}
 
 	fmt.Printf("Hello, welcome to %v booking app\n", hotelName)
 	fmt.Println("Get your hotel tickets here and enjoy your stay")
 	fmt.Println("Your comfort is our pleasure.....")
 
-	var firstName string
-	var lastName string
-	var e_mail string
-	var userTickets uint
+	// Beginning of loop
 
-	// code that prompts you for data:
+	for {
+		var firstName string
+		var lastName string
+		var e_mail string
+		var userTickets uint
 
-	fmt.Println("Please enter your firstname:")
-	fmt.Scan(&firstName)
+		// code that prompts you for data:
 
-	fmt.Println("Your lastname:")
-	fmt.Scan(&lastName)
+		fmt.Println("Please enter your firstname:")
+		fmt.Scan(&firstName)
 
-	fmt.Println("Your e-mail address:")
-	fmt.Scan(&e_mail)
+		fmt.Println("Your lastname:")
+		fmt.Scan(&lastName)
 
-	fmt.Println("Enter number of Tickets you want:")
-	fmt.Scan(&userTickets)
+		fmt.Println("Your e-mail address:")
+		fmt.Scan(&e_mail)
 
-	fmt.Printf("Thank you %v %v for booking %v Tickets, you'll recieve a confirmation at %v we hope you come back again\n", firstName, lastName, userTickets, e_mail)
+		fmt.Println("Enter number of Tickets you want:")
+		fmt.Scan(&userTickets)
 
-	// Ticket reduction logic
+		fmt.Printf("Thank you %v %v for booking %v Tickets, you'll recieve a confirmation at %v we hope you come back again\n", firstName, lastName, userTickets, e_mail)
 
-	remainingTickets = remainingTickets - userTickets
+		// Ticket reduction logic
 
-	// Array logic
+		remainingTickets = remainingTickets - userTickets
 
-	bookings = append(bookings, firstName+" "+lastName)
+		// Array logic
 
-	fmt.Printf("The whole slice: %v\n", bookings)
-	fmt.Printf("The first value: %v\n", bookings[0])
-	fmt.Printf("Slice type: %T\n", bookings)
-	fmt.Printf("Slice length: %v\n", len(bookings))
+		bookings = append(bookings, firstName+" "+lastName)
 
-	fmt.Printf("%v of %v Tickets left for %v.....!\n", remainingTickets, hotelTickets, hotelName)
+		fmt.Printf("%v of %v Tickets left for %v.....!\n", remainingTickets, hotelTickets, hotelName)
+
+		fmt.Printf("These are all our bookings: %v\n", bookings)
+
+	}
 
 }
