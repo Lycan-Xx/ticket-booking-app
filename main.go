@@ -46,6 +46,13 @@ func main() {
 
 		fmt.Printf("%v of %v Tickets left for %v.....!\n", remainingTickets, hotelTickets, hotelName)
 
+		firstNames := []string{}
+		for index, booking := range bookings {
+			var names = strings.Fields(boooking)
+			var firstName = names[0]
+
+		}
+
 		fmt.Printf("These are all our bookings: %v\n", bookings)
 
 	}
